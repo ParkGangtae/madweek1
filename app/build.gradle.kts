@@ -43,6 +43,9 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    implementation("com.makeramen:roundedimageview:2.3.0")
+    implementation ("androidx.cardview:cardview:1.0.0")
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 }
