@@ -17,9 +17,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/nshv"
             android:text="리뷰 모음집"
+            android:textColor="@color/black"
             android:textSize="25sp" />
 
         <TextView
@@ -33,12 +37,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/recyclerView_card"
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/mtitle"
             android:layout_marginStart="6dp"
             android:layout_marginEnd="6dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="20dp"
 
             app:cardElevation="8dp"
             card_view:cardBackgroundColor="#ECECEC"
@@ -59,51 +63,52 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/textcard"
-            android:layout_width="match_parent"
-            android:layout_height="28dp"
-            android:layout_above="@+id/ranking_card"
-            android:layout_marginStart="6dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginTop="10dp"
-
-            app:cardElevation="8dp"
-            card_view:cardBackgroundColor="#4F2E96"
-            card_view:cardCornerRadius="35dp">
-
-            <TextView
-                android:id="@+id/ntitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-
-                android:fontFamily="@font/nshv"
-                android:text="MadTicket RANKING"
-                android:textColor="#ECECEC"
-                android:textSize="18sp" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/ranking_card"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/recyclerView_card"
             android:layout_marginStart="6dp"
             android:layout_marginEnd="6dp"
 
             app:cardElevation="8dp"
-            card_view:cardBackgroundColor="#ECECEC"
+            card_view:cardBackgroundColor="#4F2E96"
             card_view:cardCornerRadius="25dp">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/movie_ranking"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/ntitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="15dp"
-                />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+
+                android:fontFamily="@font/nshv"
+                android:text="MadTicket RANKING"
+                android:textColor="#ECECEC"
+                android:textSize="18sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ranking_card"
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="6dp"
+
+                app:cardElevation="8dp"
+                card_view:cardBackgroundColor="#ECECEC"
+                card_view:cardCornerRadius="25dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/movie_ranking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="15dp" />
+            </androidx.cardview.widget.CardView>
+
         </androidx.cardview.widget.CardView>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton

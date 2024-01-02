@@ -7,9 +7,12 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -133,7 +136,7 @@ public class Fragment2 extends Fragment {
 
 
             ImageView imageView = new ImageView(context);
-            imageView.setLayoutParams(new ViewGroup.LayoutParams(context.getResources().getDisplayMetrics().widthPixels/2, context.getResources().getDisplayMetrics().widthPixels*3/4));
+            imageView.setLayoutParams(new ViewGroup.LayoutParams(context.getResources().getDisplayMetrics().widthPixels/2, context.getResources().getDisplayMetrics().widthPixels*2/3));
             imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
             imageView.setPadding(0, 0, 10, 0);
             imageView.setImageResource(imgID1[i]);
@@ -143,49 +146,19 @@ public class Fragment2 extends Fragment {
                 @Override
                 public void onClick(View view){
                     View dialogView = View.inflate(context, R.layout.dialog, null);
-                    AlertDialog.Builder dlg = new AlertDialog.Builder(context);
+                    AlertDialog.Builder dlg = new AlertDialog.Builder(new ContextThemeWrapper(context, R.style.CustomAlertDialogStyle));
 
                     TextView title = dialogView.findViewById(R.id.movie_title);
-//                    ImageView poster = dialogView.findViewById(R.id.movie_poster);
 
                     LinearLayout recipeViewLinearLayout = dialogView.findViewById(R.id.movie_video);
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+
                     YouTubePlayerView video = new YouTubePlayerView(context);
                     video.setLayoutParams(params);
                     recipeViewLinearLayout.addView(video);
                     getLifecycle().addObserver(video);
 
                     title.setText(parsed_title.get(pos));
-
-//                    final Bitmap[] bitmap = new Bitmap[1];
-//                    Thread uThread = new Thread() {
-//                        @Override
-//                        public void run(){
-//                            try{
-//                                // 이미지 URL 경로
-//                                URL url = new URL(parsed_poster.get(pos));
-//
-//                                // web에서 이미지를 가져와 ImageView에 저장할 Bitmap을 만든다.
-//                                HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-//                                conn.setDoInput(true); // 서버로부터 응답 수신
-//                                conn.connect(); //연결된 곳에 접속할 때 (connect() 호출해야 실제 통신 가능함)
-//
-//                                InputStream is = conn.getInputStream(); //inputStream 값 가져오기
-//                                bitmap[0] = BitmapFactory.decodeStream(is); // Bitmap으로 변환
-//
-//                            }catch (MalformedURLException e){e.printStackTrace();}
-//                            catch (IOException e){e.printStackTrace();}
-//                        }
-//                    };
-//
-//                    uThread.start(); // 작업 Thread 실행
-//
-//                    try{
-//                        uThread.join();
-//                        poster.setImageBitmap(bitmap[0]);
-//                    }catch (InterruptedException e){
-//                        e.printStackTrace();
-//                    }
 
                     video.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                         @Override
@@ -198,6 +171,7 @@ public class Fragment2 extends Fragment {
                     dlg.setView(dialogView);
                     dlg.setNegativeButton("닫기",null);
                     dlg.show();
+
                 }
             });
 
@@ -270,7 +244,7 @@ public class Fragment2 extends Fragment {
             catch (JSONException e) {e.printStackTrace();}
 
             ImageView imageView = new ImageView(context);
-            imageView.setLayoutParams(new ViewGroup.LayoutParams(context.getResources().getDisplayMetrics().widthPixels/2, context.getResources().getDisplayMetrics().widthPixels*3/4));
+            imageView.setLayoutParams(new ViewGroup.LayoutParams(context.getResources().getDisplayMetrics().widthPixels/2, context.getResources().getDisplayMetrics().widthPixels*2/3));
             imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
             imageView.setPadding(10, 0, 0, 0);
             imageView.setImageResource(imgID2[i]);
@@ -280,7 +254,7 @@ public class Fragment2 extends Fragment {
                 @Override
                 public void onClick(View view){
                     View dialogView = View.inflate(context, R.layout.dialog, null);
-                    AlertDialog.Builder dlg = new AlertDialog.Builder(context);
+                    AlertDialog.Builder dlg = new AlertDialog.Builder(new ContextThemeWrapper(context, R.style.CustomAlertDialogStyle));
 
                     TextView title = dialogView.findViewById(R.id.movie_title);
 //                    ImageView poster = dialogView.findViewById(R.id.movie_poster);

@@ -33,6 +33,7 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.ViewHold
         RankingData rankingData = rankingDataArrayList.get(position);
 
         holder.ranked_movie_title.setText(String.valueOf(rankingData.getTitle()));
+        holder.tv_score.setText(String.valueOf(Math.round(rankingData.getAvg_score() * 10.0f)/10.0f));
         holder.ratingBar_avg.setRating(rankingData.getAvg_score());
     }
 
@@ -44,12 +45,13 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.ViewHold
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
-        TextView ranked_movie_title;
+        TextView ranked_movie_title, tv_score;
         RatingBar ratingBar_avg;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             ranked_movie_title = itemView.findViewById(R.id.ranked_movie_title);
+            tv_score = itemView.findViewById(R.id.score_text);
             ratingBar_avg = itemView.findViewById(R.id.ratingBar_avg);
         }
     }
