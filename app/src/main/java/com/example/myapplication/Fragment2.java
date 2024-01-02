@@ -146,7 +146,7 @@ public class Fragment2 extends Fragment {
                     AlertDialog.Builder dlg = new AlertDialog.Builder(context);
 
                     TextView title = dialogView.findViewById(R.id.movie_title);
-                    ImageView poster = dialogView.findViewById(R.id.movie_poster);
+//                    ImageView poster = dialogView.findViewById(R.id.movie_poster);
 
                     LinearLayout recipeViewLinearLayout = dialogView.findViewById(R.id.movie_video);
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -157,35 +157,35 @@ public class Fragment2 extends Fragment {
 
                     title.setText(parsed_title.get(pos));
 
-                    final Bitmap[] bitmap = new Bitmap[1];
-                    Thread uThread = new Thread() {
-                        @Override
-                        public void run(){
-                            try{
-                                // 이미지 URL 경로
-                                URL url = new URL(parsed_poster.get(pos));
-
-                                // web에서 이미지를 가져와 ImageView에 저장할 Bitmap을 만든다.
-                                HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-                                conn.setDoInput(true); // 서버로부터 응답 수신
-                                conn.connect(); //연결된 곳에 접속할 때 (connect() 호출해야 실제 통신 가능함)
-
-                                InputStream is = conn.getInputStream(); //inputStream 값 가져오기
-                                bitmap[0] = BitmapFactory.decodeStream(is); // Bitmap으로 변환
-
-                            }catch (MalformedURLException e){e.printStackTrace();}
-                            catch (IOException e){e.printStackTrace();}
-                        }
-                    };
-
-                    uThread.start(); // 작업 Thread 실행
-
-                    try{
-                        uThread.join();
-                        poster.setImageBitmap(bitmap[0]);
-                    }catch (InterruptedException e){
-                        e.printStackTrace();
-                    }
+//                    final Bitmap[] bitmap = new Bitmap[1];
+//                    Thread uThread = new Thread() {
+//                        @Override
+//                        public void run(){
+//                            try{
+//                                // 이미지 URL 경로
+//                                URL url = new URL(parsed_poster.get(pos));
+//
+//                                // web에서 이미지를 가져와 ImageView에 저장할 Bitmap을 만든다.
+//                                HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+//                                conn.setDoInput(true); // 서버로부터 응답 수신
+//                                conn.connect(); //연결된 곳에 접속할 때 (connect() 호출해야 실제 통신 가능함)
+//
+//                                InputStream is = conn.getInputStream(); //inputStream 값 가져오기
+//                                bitmap[0] = BitmapFactory.decodeStream(is); // Bitmap으로 변환
+//
+//                            }catch (MalformedURLException e){e.printStackTrace();}
+//                            catch (IOException e){e.printStackTrace();}
+//                        }
+//                    };
+//
+//                    uThread.start(); // 작업 Thread 실행
+//
+//                    try{
+//                        uThread.join();
+//                        poster.setImageBitmap(bitmap[0]);
+//                    }catch (InterruptedException e){
+//                        e.printStackTrace();
+//                    }
 
                     video.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                         @Override
@@ -283,7 +283,7 @@ public class Fragment2 extends Fragment {
                     AlertDialog.Builder dlg = new AlertDialog.Builder(context);
 
                     TextView title = dialogView.findViewById(R.id.movie_title);
-                    ImageView poster = dialogView.findViewById(R.id.movie_poster);
+//                    ImageView poster = dialogView.findViewById(R.id.movie_poster);
 
                     LinearLayout recipeViewLinearLayout = dialogView.findViewById(R.id.movie_video);
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -294,35 +294,35 @@ public class Fragment2 extends Fragment {
 
                     title.setText(parsed_title.get(pos));
 
-                    final Bitmap[] bitmap = new Bitmap[1];
-                    Thread uThread = new Thread() {
-                        @Override
-                        public void run(){
-                            try{
-                                // 이미지 URL 경로
-                                URL url = new URL(parsed_poster.get(pos));
-
-                                // web에서 이미지를 가져와 ImageView에 저장할 Bitmap을 만든다.
-                                HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-                                conn.setDoInput(true); // 서버로부터 응답 수신
-                                conn.connect(); //연결된 곳에 접속할 때 (connect() 호출해야 실제 통신 가능함)
-
-                                InputStream is = conn.getInputStream(); //inputStream 값 가져오기
-                                bitmap[0] = BitmapFactory.decodeStream(is); // Bitmap으로 변환
-
-                            }catch (MalformedURLException e){e.printStackTrace();}
-                            catch (IOException e){e.printStackTrace();}
-                        }
-                    };
-
-                    uThread.start(); // 작업 Thread 실행
-
-                    try{
-                        uThread.join();
-                        poster.setImageBitmap(bitmap[0]);
-                    }catch (InterruptedException e){
-                        e.printStackTrace();
-                    }
+//                    final Bitmap[] bitmap = new Bitmap[1];
+//                    Thread uThread = new Thread() {
+//                        @Override
+//                        public void run(){
+//                            try{
+//                                // 이미지 URL 경로
+//                                URL url = new URL(parsed_poster.get(pos));
+//
+//                                // web에서 이미지를 가져와 ImageView에 저장할 Bitmap을 만든다.
+//                                HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+//                                conn.setDoInput(true); // 서버로부터 응답 수신
+//                                conn.connect(); //연결된 곳에 접속할 때 (connect() 호출해야 실제 통신 가능함)
+//
+//                                InputStream is = conn.getInputStream(); //inputStream 값 가져오기
+//                                bitmap[0] = BitmapFactory.decodeStream(is); // Bitmap으로 변환
+//
+//                            }catch (MalformedURLException e){e.printStackTrace();}
+//                            catch (IOException e){e.printStackTrace();}
+//                        }
+//                    };
+//
+//                    uThread.start(); // 작업 Thread 실행
+//
+//                    try{
+//                        uThread.join();
+//                        poster.setImageBitmap(bitmap[0]);
+//                    }catch (InterruptedException e){
+//                        e.printStackTrace();
+//                    }
 
                     video.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
                         @Override

@@ -45,7 +45,6 @@ public class ReviewDataAdapter extends RecyclerView.Adapter<ReviewDataAdapter.My
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder{
-
         TextView movie_text, review_text;
         RatingBar ratingBar;
 
