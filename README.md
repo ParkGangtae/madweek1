@@ -38,20 +38,20 @@ TabLayout을 적용해 TabPagerAdapter를 이용해 각 Fragment를 볼 수 있�
 
 - 영화 상영회에 참여할 수 있는 2분반 구성원들의 자기소개 프로필을 보여주는 탭이다. 자기소개 프로필에는 이름 뿐만 아니라 생년월일, MBTI, 연락처, 프로필 사진이 존재한다.  해당 데이터들은 JSON 데이터 형식을 이용하여 RecyclerView로 보여주었다.
 
-![KakaoTalk_20240103_175214739.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/b4e358e3-5240-4193-a9e2-8fe440252ba0/KakaoTalk_20240103_175214739.jpg)
+<img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/546981b2-e59f-447d-92f3-a4b68ba39aa6.jpg" width = 50% height = 50% >
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/aa2b0071-4367-47b3-ad01-871a3643c79d/Untitled.png)
-
-![KakaoTalk_20240103_175214739_01.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/613f425b-3a4a-4d46-a631-bc9cbcaa9548/KakaoTalk_20240103_175214739_01.jpg)
-
+<img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/d7be5b1e-9ac8-48e5-9689-779c6a36a0e4" width = 50% height = 50% >
+<ima src = "https://github.com/ParkGangtae/madweek1/assets/127393132/3a8c8f91-3f4c-448e-8fc6-d74183615a01" width = 50% height = 50% >
+  
 - 구성원의 프로필을 CardView로 만들었기 때문에 상영회에 참여하고 싶은 구성원들은 예매하기 버튼을 눌러서 각자 영화를 예매할 수 있다.
 - 맨 상단에는 SearchView를 추가하여 검색하고 싶은 이름, 생년월일, MBTI, 연락처 중 원하는 텍스트를 입력하고 Submit하면 해당 데이터의 위치로 스크롤이 이동한다. 또한 SearchView의 X 버튼을 누르게 된다면 Tab 1의 최상단으로 이동한다.
 
-![Tab1의 구성원 프로필 ](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/88561dc4-b3b0-4808-b3f6-b933fb676a4a/KakaoTalk_20240103_175214739.jpg)
+![Tab1의 구성원 프로필 ] <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/546981b2-e59f-447d-92f3-a4b68ba39aa6" width = 50% height = 50% >
 
 Tab1의 구성원 프로필 
 
-![Search View 기능 실행 ](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/bb540798-052d-4b01-8bed-621f67abd3bd/KakaoTalk_20240103_175214739_01.jpg)
+![Search View 기능 실행 ]  <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/3a8c8f91-3f4c-448e-8fc6-d74183615a01" width = 50% height = 50% >
+ 
 
 Search View 기능 실행 
 
@@ -63,45 +63,51 @@ Search View 기능 실행
 - 각 영화 별로 개별 상영관과 상영 시간표들이 존재하고, 각 시간에 따라 이용할 수 있는 좌석과 전체 좌석을 볼 수 있다. 해당 좌석의 수는 데이터베이스와 연결하여 관리하였다. (SQLite)
 - 데이터베이스에는 Seat 테이블이 존재하고 테이블에는 id, time_id, seat_id가 존재하며 id가 primary keyd이다. time_id별로 seat_id를 count 하여 상영 시간에 따른 이용 좌석의 갯수를 관리하였다.
 
-![로딩 중 아이콘](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/bdb9fd3b-4441-4364-983e-ab94b9c32a61/KakaoTalk_20240103_175214739_02.jpg)
+![로딩 중 아이콘] <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/82f1b94f-fc9a-424c-958d-e9b4ad60847e" width = 50% height = 50% >
 
 로딩 중 아이콘
 
-![영화 포스터 및 상영 시간표](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/24494bb8-9d5a-426c-8d38-2d7e3ef1fcef/KakaoTalk_20240103_175214739_03.jpg)
+![영화 포스터 및 상영 시간표] <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/42b20a25-bb4b-4992-b268-b19b273fa201" width = 50% height = 50% >
 
 영화 포스터 및 상영 시간표
 
 - 원하는 영화와 상영관, 상영 시간을 고른 후 TimeCard를 누르게 되면 TimeCard의 배경 색상이 바뀌게 되며 선택되었음을 알 수 있게 표시해주었다. 그런 후에 예매 확정을 누르게 되면 예매에 성공하였다는 알림창이 뜨게 되고, 모바일 티켓이 발행된다.
 - 또한 데이터베이스에 존재하는 해당 영화와 시간의 이용할 수 있는 좌석 갯수가 1씩 감소하게 된다. 예매를 확정한 후 예매창을 다시 들어갔을 때, 이용좌석의 갯수가 줄어든 것을 확인할 수 있다.
-
-![아이언맨 3를 선택함](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/016cf169-21f9-4216-927e-f8e93514673e/KakaoTalk_20240103_175214739_04.jpg)
+<img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/e025c839-ca6d-4df4-ad36-aee616747beb" width = 50% height = 50% >
 
 아이언맨 3를 선택함
 
-![예매확정 버튼 누름](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/f778fd53-d3ca-4c78-81eb-b24eda63d388/KakaoTalk_20240103_175214739_05.jpg)
+![예매확정 버튼 누름] <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/9cd674bd-7e8e-4a6c-822b-a024c247edca" width = 50% height = 50% >
 
 예매확정 버튼 누름
 
-![모바일 티켓 발행](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/b2a3b599-4dd9-4d14-b7ed-869e1329e8d3/KakaoTalk_20240103_175214739_06.jpg)
-
+![모바일 티켓 발행]  <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/1dceb910-2b20-440d-9578-7e24f8a25c4b" width = 50% height = 50% >
 모바일 티켓 발행
 
-![아이언맨 3 좌석 갯수 감소](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/a5bb04a3-429f-43db-b8d4-af8ff0772add/KakaoTalk_20240103_182147258_03.jpg)
+![아이언맨 3 좌석 갯수 감소] <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/6f663e4c-7983-47d3-ba06-cb49b8ba4cd8" width = 50% height = 50% >
 
 아이언맨 3 좌석 갯수 감소
 
-![이용할 수 없는 좌석 선택](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/70692418-05ae-4f66-bb6e-f496a4d9a39c/KakaoTalk_20240103_182147258_02.jpg)
+![이용할 수 없는 좌석 선택] <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/ae456975-9c99-4e88-aee3-7e00ad85032c" width = 50% height = 50% >
 
 이용할 수 없는 좌석 선택
 
-![예매 실패](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/e5770de3-d712-4408-8fae-7b8cbc5942e9/KakaoTalk_20240103_182147258.jpg)
+![예매 실패]![이용할 수 없는 좌석 선택] <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/c3a346fa-69a8-4ea0-8e5e-2d023c258253" width = 50% height = 50% >
 
 예매 실패
 
 - 또한 팝업창 최상단에 위치해있는 X 버튼을 누르면 예매창을 닫을 수 있다.
 - 우측 하단에 존재하는 Scroll Down 버튼을 누르면 스크롤이 어디에 있든 창의 최하단으로 자동 스크롤이 되어 예매 확정 버튼을 편리하게 누를 수 있다.
 
+- 또한 팝업창 최상단에 위치해있는 X 버튼을 누르면 예매창을 닫을 수 있다.
+- 우측 하단에 존재하는 `ScrollDown` 버튼을 누르면 스크롤이 어디에 있든 창의 최하단으로 자동 스크롤이 되어 예매 확정 버튼을 편리하게 누를 수 있다.
 
+![창 닫기 버튼 ] <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/e025c839-ca6d-4df4-ad36-aee616747beb" width = 50% height = 50% >
+창 닫기 버튼 
+
+![Scroll Down 버튼 ] <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/9cd674bd-7e8e-4a6c-822b-a024c247edca" width = 50% height = 50% >
+
+Scroll Down 버튼
 <br>
 
 ### Tab 2: Movie Gallery
