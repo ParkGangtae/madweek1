@@ -149,4 +149,11 @@ SQLite Database를 이용해서 해당 영화, 리뷰 내용, 별점, 그리고 
 
 - 리뷰를 저장하는 Table과 각 영화에 대한 평균 별점이 저장되어 있는 Table 두 개로 나뉨
 
-SwipeRefreshLayout을 적용해 화면을 아래로 당겼을 때 새로고침 하여 최신 리뷰를 반영하도록 함
+SwipeRefreshLayout을 적용해 화면을 아래로 당겼을 때 새로고침 하여 최신 리뷰를 반영하도록 함\
+
+
+
+
+
+apk 파일 링크
+https://drive.google.com/file/d/1rC8PnB4uX9irNeDHgLgKrDOQqoZxuM9E/view?usp=drive_link
