@@ -156,4 +156,4 @@ SwipeRefreshLayout을 적용해 화면을 아래로 당겼을 때 새로고침 �
 
 
 apk 파일 링크
-https://drive.google.com/file/d/1rC8PnB4uX9irNeDHgLgKrDOQqoZxuM9E/view?usp=drive_link
+https://drive.google.com/file/d/1rC8PnB4uX9irNeDHgLgKrDOQqoZxuM9E/view?usp=sharing
