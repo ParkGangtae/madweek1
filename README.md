@@ -21,4 +21,7 @@ MadTicket은 몰입캠프 영화 상영회에서 보일 20개의 영화를 함�
 
 ### Intro & TabLayout
 
+<img src = "https://github.com/ParkGangtae/madweek1/assets/51894747/8b251be1-dee4-44d3-9a25-ffe6204b580b.jpg" width = 20% height = 20%>
+앱을 처음 실행했을 때 2초간 나타나는 로딩화면을 splash로 구현
+
 
