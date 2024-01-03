@@ -1,15 +1,23 @@
 package com.example.myapplication;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
+import static java.security.AccessController.getContext;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -67,9 +75,23 @@ public class AddActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String movie = selectItem.get(0);
                 String review = addReviewEdit.getText().toString();
-                ReviewDataDB reviewDataDB = new ReviewDataDB(AddActivity.this);
-                reviewDataDB.addReviewData(movie, review, movie_score);
-                finish();
+
+                if(!review.isEmpty()) {
+                    Log.d(TAG, "String Value" + review);
+                    ReviewDataDB reviewDataDB = new ReviewDataDB(AddActivity.this);
+                    reviewDataDB.addReviewData(movie, review, movie_score);
+
+                    if (reviewDataDB.isValueExist(movie)) {
+                        movie_score = reviewDataDB.getSumForTitle(movie) / reviewDataDB.CountValue(movie);
+                        Log.d(TAG, "Float Value: " + movie_score);
+                        reviewDataDB.updateValue(movie, movie_score);
+                    } else {
+                        reviewDataDB.addRankingData(movie, movie_score);
+                    }
+                    finish();
+                }else if(review.isEmpty()){
+                    Toast.makeText(AddActivity.this, "리뷰를 작성해 주세요", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

@@ -1,63 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
     android:id="@+id/swipe_layout"
     android:background="#ECECEC">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/mtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="리뷰 모음집"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/nshv"
+            android:text="리뷰 모음집"
+            android:textColor="@color/black"
             android:textSize="25sp" />
 
         <TextView
             android:id="@+id/noData_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No Data"
-            android:layout_margin="20dp"/>
+            android:layout_below="@+id/mtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="No Data" />
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:id="@+id/recyclerView_card"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
-            card_view:cardBackgroundColor="#4F2E96"
-            card_view:cardCornerRadius="30dp"
-            app:cardElevation="8dp">
+            android:layout_below="@+id/mtitle"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="20dp"
+
+            app:cardElevation="8dp"
+            card_view:cardBackgroundColor="#ECECEC"
+            card_view:cardCornerRadius="25dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                />
 
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/textcard"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recyclerView_card"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:cardElevation="8dp"
+            card_view:cardBackgroundColor="#4F2E96"
+            card_view:cardCornerRadius="25dp">
+
+            <TextView
+                android:id="@+id/ntitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+
+                android:fontFamily="@font/nshv"
+                android:text="MadTicket RANKING"
+                android:textColor="#ECECEC"
+                android:textSize="18sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ranking_card"
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="6dp"
+
+                app:cardElevation="8dp"
+                card_view:cardBackgroundColor="#ECECEC"
+                card_view:cardCornerRadius="25dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/movie_ranking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="15dp" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/add_btn"
-            android:layout_width="92dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="#4F2E96"
-            app:srcCompat="@drawable/icon3"
-            app:tint="@android:color/white" />
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
 
-    </LinearLayout>
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/nshv"
+
+            android:text="REVIEW"
+            android:textColor="@color/white"
+            app:backgroundTint="#4F2E96"
+            app:elevation="5dp"
+            style="@style/MyExtendedFAB"
+            app:rippleColor="#44C0CC"
+
+            app:icon="@drawable/plus"
+            app:iconPadding="10dp"
+            app:iconSize="15dp"
+            app:iconTint="@color/white" />
+
+    </RelativeLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

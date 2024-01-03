@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -31,8 +32,10 @@ public class Fragment3 extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
     ReviewDataDB db;
     ArrayList<ReviewData> reviewDataArrayList = new ArrayList<>();
-    RecyclerView recyclerView;
+    ArrayList<RankingData> rankingDataArrayList = new ArrayList<>();
+    RecyclerView recyclerView, recyclerView_rank;
     ReviewDataAdapter adapter;
+    RankingAdapter adapter2;
     TextView noDataText;
     SwipeRefreshLayout swipeRefreshLayout;
 
@@ -45,15 +48,23 @@ public class Fragment3 extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
         noDataText = view.findViewById(R.id.noData_text);
         recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView_rank = view.findViewById(R.id.movie_ranking);
+
         adapter = new ReviewDataAdapter(getContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new RecyclerViewDecoration(0, 0));
 
-        db = new ReviewDataDB(getContext());
-        storeDataInArray();
+        adapter2 = new RankingAdapter(getContext());
+        recyclerView_rank.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView_rank.setAdapter(adapter2);
 
-        FloatingActionButton addBtn = view.findViewById(R.id.add_btn);
+        db = new ReviewDataDB(getContext());
+
+        storeDataInArray();
+        storeDataInArray2();
+
+        ExtendedFloatingActionButton addBtn = view.findViewById(R.id.add_btn);
         addBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -82,6 +93,20 @@ public class Fragment3 extends Fragment implements SwipeRefreshLayout.OnRefreshL
             }
         }
     }
+    public void storeDataInArray2(){
+        Cursor cursor = db.getAllDataSortedByColumn();
+
+        if(cursor.getCount() == 0){
+        }else{
+            while (cursor.moveToNext()){
+                RankingData rankingData = new RankingData(cursor.getString(0),
+                        cursor.getFloat(1));
+                rankingDataArrayList.add(rankingData);
+                adapter2.addItem(rankingData);
+                adapter2.notifyDataSetChanged();
+            }
+        }
+    }
 
     @Override
     public void onRefresh() {
@@ -91,6 +116,8 @@ public class Fragment3 extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
     public void updateLayoutView() {
         adapter.removeItem();
+        adapter2.removeItem();
         storeDataInArray();
+        storeDataInArray2();
     }
 }
