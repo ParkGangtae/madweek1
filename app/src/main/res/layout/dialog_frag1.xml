@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<ScrollView
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true"
-    >
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/scrollView_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
 
     <GridLayout
         android:layout_width="match_parent"
@@ -203,13 +208,12 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/vertex_1"
                     android:clickable="true"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="11dp"
                     android:gravity="center_vertical"
                     android:orientation="vertical"
                     card_view:cardBackgroundColor="#F4FFFF"
                     card_view:cardCornerRadius="10dp"
                     card_view:cardUseCompatPadding="true"
-
 
                     >
 
@@ -300,7 +304,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/timecard1"
-                    android:layout_marginTop="53dp"
+                    android:layout_alignTop="@id/timecard1"
                     android:layout_marginStart="1dp"
                     android:gravity="center_vertical"
                     android:orientation="vertical"
@@ -414,7 +418,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/vertex_2"
 
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="11dp"
 
                     android:gravity="center_vertical"
                     android:orientation="vertical"
@@ -511,7 +515,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/timecard3"
-                    android:layout_marginTop="176dp"
+                    android:layout_alignTop="@id/timecard3"
                     android:layout_marginStart="1dp"
                     android:gravity="center_vertical"
                     android:orientation="vertical"
@@ -610,7 +614,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/timecard4"
-                    android:layout_marginTop="176dp"
+                    android:layout_alignTop="@id/timecard4"
 
                     android:gravity="center_vertical"
                     android:orientation="vertical"
@@ -813,7 +817,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_3"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -912,7 +916,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard6"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard6"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -1026,7 +1030,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_4"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -1124,7 +1128,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard8"
-                            android:layout_marginTop="176dp"
+                            android:layout_alignTop="@id/timecard8"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -1221,7 +1225,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard9"
-                            android:layout_marginTop="176dp"
+                            android:layout_alignTop="@id/timecard9"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -1419,7 +1423,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_5"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -1520,7 +1524,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard11"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard11"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -1635,7 +1639,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_6"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -1732,7 +1736,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard13"
-                            android:layout_marginTop="176dp"
+                            android:layout_alignTop="@id/timecard13"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -1828,7 +1832,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard14"
-                            android:layout_marginTop="176dp"
+                            android:layout_alignTop="@id/timecard14"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
                             card_view:cardBackgroundColor="#F4FFFF"
@@ -2025,7 +2029,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_7"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -2124,7 +2128,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard16"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard16"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -2239,7 +2243,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_8"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -2338,7 +2342,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard18"
-                            android:layout_marginTop="176dp"
+                            android:layout_alignTop="@id/timecard18"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -2435,7 +2439,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard19"
-                            android:layout_marginTop="176dp"
+                            android:layout_alignTop="@id/timecard19"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
                             card_view:cardBackgroundColor="#F4FFFF"
@@ -2628,7 +2632,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_9"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -2727,7 +2731,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard21"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard21"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -2841,7 +2845,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_10"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -2939,7 +2943,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard23"
-                            android:layout_marginTop="176dp"
+                            android:layout_alignTop="@id/timecard23"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -3138,7 +3142,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_11"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -3236,7 +3240,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard25"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard25"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -3350,7 +3354,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_12"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -3546,7 +3550,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_13"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -3644,7 +3648,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard28"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard28"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -3741,7 +3745,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard29"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard29"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -3855,7 +3859,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_14"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -4050,7 +4054,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_15"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -4148,7 +4152,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard32"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard32"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -4245,7 +4249,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard33"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard33"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -4359,7 +4363,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_16"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -4556,7 +4560,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_17"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -4654,7 +4658,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard36"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard36"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -4751,7 +4755,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard37"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard37"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -4865,7 +4869,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_18"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -5062,7 +5066,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_19"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -5160,7 +5164,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard40"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard40"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -5257,7 +5261,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard41"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard41"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -5371,7 +5375,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_20"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -5570,7 +5574,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_21"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -5668,7 +5672,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard44"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard44"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -5765,7 +5769,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard45"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard45"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -5879,7 +5883,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_22"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -6075,7 +6079,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_23"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -6173,7 +6177,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard48"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard48"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -6270,7 +6274,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard49"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard49"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -6384,7 +6388,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_24"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -6582,7 +6586,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_25"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -6680,7 +6684,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard52"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard52"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -6777,7 +6781,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard53"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard53"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -6890,7 +6894,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_26"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -7089,7 +7093,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_27"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -7187,7 +7191,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard56"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard56"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -7284,7 +7288,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard57"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard57"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -7398,7 +7402,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_28"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -7599,7 +7603,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_29"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -7697,7 +7701,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard60"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard60"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -7795,7 +7799,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard61"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard61"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -7909,7 +7913,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_30"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -8107,7 +8111,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_31"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -8205,7 +8209,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard64"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard64"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -8302,7 +8306,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard65"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard65"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -8416,7 +8420,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_32"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -8611,7 +8615,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_33"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -8709,7 +8713,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard68"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard68"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -8806,7 +8810,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard69"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard69"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -8920,7 +8924,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_34"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -9118,7 +9122,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_35"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -9216,7 +9220,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard72"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard72"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -9313,7 +9317,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard73"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard73"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -9427,7 +9431,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_36"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -9626,7 +9630,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_37"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -9724,7 +9728,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard76"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard76"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -9821,7 +9825,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard77"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard77"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -9935,7 +9939,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_38"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -10131,7 +10135,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_39"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -10229,7 +10233,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard80"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard80"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -10327,7 +10331,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/timecard81"
-                            android:layout_marginTop="53dp"
+                            android:layout_alignTop="@id/timecard81"
                             android:layout_marginStart="1dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -10442,7 +10446,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/vertex_40"
 
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="11dp"
 
                             android:gravity="center_vertical"
                             android:orientation="vertical"
@@ -10561,5 +10565,22 @@
 
     </GridLayout>
 
-</ScrollView>
+    </ScrollView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabScrollToTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="5dp"
+        android:layout_gravity="bottom|end"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.FloatingActionButton.Rounded"
+
+        app:srcCompat="@drawable/icon_down"
+        app:backgroundTint="#99FFFFFF"
+        app:tint="@color/black"
+        app:elevation="0dp"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

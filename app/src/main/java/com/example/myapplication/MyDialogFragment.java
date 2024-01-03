@@ -112,6 +112,14 @@ public class MyDialogFragment extends DialogFragment {
         fragmentView = view;
         fragment1 = (Fragment1) requireActivity().getSupportFragmentManager().findFragmentByTag("fragment1");
 
+        ScrollView scrollView = view.findViewById(R.id.scrollView_main);
+        FloatingActionButton scrollTopButton = view.findViewById(R.id.fabScrollToTop);
+        scrollTopButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                scrollView.fullScroll(ScrollView.FOCUS_DOWN);
+            }
+        });
 
         closeButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -149,19 +157,31 @@ public class MyDialogFragment extends DialogFragment {
 
             movieDetails = getMovieDetailsForTimeCardId(selectedTimeCardId);
 
+            SeatDBHelper dbHelper = new SeatDBHelper(requireContext());
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+            // Implement the SQL DELETE statement to delete the selected time card
+            String selection = SeatTable.COLUMN_TIME_ID + " = ?";
+            String[] selectionArgs = {String.valueOf(selectedTimeCardId)};
+
+            String[] projection = {"id"};
+            Cursor cursor = db.query(SeatTable.TABLE_NAME, projection, selection, selectionArgs, null,null,null);
+
+            if(cursor.moveToFirst()){
+                showConfirmationDialog(selectedMovName, movieDetails);
+            }
+            else{
+                Toast.makeText(requireContext(), "좌석이 없어요!", Toast.LENGTH_SHORT).show();
+            }
+            // frag1 에다가 예매한 사람 이름, 영화 이름 추가
+
+
+            // Optionally, reset the selected time card ID after deletiond
+
 
             // Handle the logic to delete the selected time card from the database
             deleteSelectedTimeCardFromDatabase();
 
-            fragment1 = new Fragment1();
-
-            // fragment1이 null이거나 추가된 상태인 경우에 업데이트 수행
-            if (fragment1 != null ) {
-                Log.d("선택한 애 이름", "하하하꺼~~ 선택한 애 이름" + selectedMovName + "선택한 영화 이름" + movieDetails);
-                fragment1.updateContent(selectedMovName, movieDetails);
-            } else {
-                Log.e("MyDialogFragment", "Fragment1 is null or not added to the activity 실화냐 또? ");
-            }
             // Update the seat count after deletion
             loadDataFromDatabase();
 
@@ -170,8 +190,8 @@ public class MyDialogFragment extends DialogFragment {
             // Dismiss the dialog after confirming the reservation
             dismiss();
 
-            // frag1 에다가 예매한 사람 이름, 영화 이름 추가
-            showConfirmationDialog(selectedMovName, movieDetails);
+
+
 
         });
 
@@ -333,7 +353,7 @@ public class MyDialogFragment extends DialogFragment {
                 Toast.makeText(requireContext(),"예매에 성공하였습니다!",Toast.LENGTH_SHORT).show();
             }
             else{
-                Toast.makeText(requireContext(), "좌석이 없어요!", Toast.LENGTH_SHORT).show();
+
             }
             cursor.close();
             db.close();
