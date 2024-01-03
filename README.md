@@ -45,7 +45,7 @@ TabLayout을 적용해 TabPagerAdapter를 이용해 각 Fragment를 볼 수 있�
 - 영화 상영회에 참여할 수 있는 2분반 구성원들의 자기소개 프로필을 보여주는 탭이다. 자기소개 프로필에는 이름 뿐만 아니라 생년월일, MBTI, 연락처, 프로필 사진이 존재한다.  해당 데이터들은 JSON 데이터 형식을 이용하여 RecyclerView로 보여주었다.
 
 
-<img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/546981b2-e59f-447d-92f3-a4b68ba39aa6.jpg" width = 20% height = 20% >
+<img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/546981b2-e59f-447d-92f3-a4b68ba39aa6.jpg" width = 20% height = 20% > *Tab1의 구성원 프로필*
 <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/d7be5b1e-9ac8-48e5-9689-779c6a36a0e4" width = 20% height = 20% >
 <ima src = "https://github.com/ParkGangtae/madweek1/assets/127393132/3a8c8f91-3f4c-448e-8fc6-d74183615a01" width = 20% height = 20% >
 
