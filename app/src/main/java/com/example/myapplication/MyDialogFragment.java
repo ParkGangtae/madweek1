@@ -34,6 +34,7 @@ import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -72,10 +73,17 @@ public class MyDialogFragment extends DialogFragment {
         // Handle the UI components and functionality of dialog_frag1.xml here
         ImageButton closeButton = view.findViewById(R.id.btn_close);
 
+        ScrollView scrollView = view.findViewById(R.id.scrollView_main);
+        FloatingActionButton scrollTopButton = view.findViewById(R.id.fabScrollToTop);
+
+        scrollTopButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                scrollView.fullScroll(ScrollView.FOCUS_UP);
+            }
+        });
 
         closeButton.setOnClickListener(new View.OnClickListener(){
-
-
             public void onClick(View v){
 
                 dismiss();

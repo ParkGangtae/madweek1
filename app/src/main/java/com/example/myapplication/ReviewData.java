@@ -10,21 +10,18 @@ public class ReviewData {
         this.review = review;
         this.score = score;
     }
-    public String getMovie(){ return movie; }
 
+    public String getMovie(){ return movie; }
     public void setMovie(String movie){
         this.movie = movie;
     }
-
     public String getReview(){
         return review;
     }
-
     public void setReview(String review){ this.review = review; }
     public float getScore(){
         return score;
     }
-
     public void setScore(float score){ this.score = score; }
 
 }
