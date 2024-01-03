@@ -27,9 +27,15 @@ MadTicket은 몰입캠프 영화 상영회에서 보일 20개의 영화를 함�
 
 <img src = "https://github.com/ParkGangtae/madweek1/assets/51894747/fb8eb347-4b31-49aa-84b1-0346b4d8f0ac.jpg" width = 50% height = 50%>
 
+
+
 TabLayout을 적용해 TabPagerAdapter를 이용해 각 Fragment를 볼 수 있도록 구현
 
+
+
 <br>
+
+
 
 ### Tab 1: Members
 구성원의 프로필을 보고 영화를 예매할 수 있는 탭
@@ -38,20 +44,24 @@ TabLayout을 적용해 TabPagerAdapter를 이용해 각 Fragment를 볼 수 있�
 
 - 영화 상영회에 참여할 수 있는 2분반 구성원들의 자기소개 프로필을 보여주는 탭이다. 자기소개 프로필에는 이름 뿐만 아니라 생년월일, MBTI, 연락처, 프로필 사진이 존재한다.  해당 데이터들은 JSON 데이터 형식을 이용하여 RecyclerView로 보여주었다.
 
+
 <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/546981b2-e59f-447d-92f3-a4b68ba39aa6.jpg" width = 20% height = 20% >
 <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/d7be5b1e-9ac8-48e5-9689-779c6a36a0e4" width = 20% height = 20% >
 <ima src = "https://github.com/ParkGangtae/madweek1/assets/127393132/3a8c8f91-3f4c-448e-8fc6-d74183615a01" width = 20% height = 20% >
+
+  
   <br>
 - 구성원의 프로필을 CardView로 만들었기 때문에 상영회에 참여하고 싶은 구성원들은 예매하기 버튼을 눌러서 각자 영화를 예매할 수 있다.
 - 맨 상단에는 SearchView를 추가하여 검색하고 싶은 이름, 생년월일, MBTI, 연락처 중 원하는 텍스트를 입력하고 Submit하면 해당 데이터의 위치로 스크롤이 이동한다. 또한 SearchView의 X 버튼을 누르게 된다면 Tab 1의 최상단으로 이동한다.
+
+
 <br>
 <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/546981b2-e59f-447d-92f3-a4b68ba39aa6" width = 20% height = 20% >
   <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/3a8c8f91-3f4c-448e-8fc6-d74183615a01" width = 20% height = 20% >
  
 
-
-
 ### 예매하기
+
 
 - 상영회에 참여하고 싶은 2분반 구성원은 본인의 프로필을 검색한 후, 예매하기 버튼을 누를 수 있다.
 - 예매창이 뜨기 전까지 로딩 아이콘이 실행된다.
@@ -63,8 +73,7 @@ TabLayout을 적용해 TabPagerAdapter를 이용해 각 Fragment를 볼 수 있�
 
  <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/82f1b94f-fc9a-424c-958d-e9b4ad60847e" width = 20% height = 20% >
 <img src = "https://github.com/ParkGangtae/madweek1/assets/127393132/42b20a25-bb4b-4992-b268-b19b273fa201" width = 20% height = 20% >
-
-
+<br>
 
 - 원하는 영화와 상영관, 상영 시간을 고른 후 TimeCard를 누르게 되면 TimeCard의 배경 색상이 바뀌게 되며 선택되었음을 알 수 있게 표시해주었다. 그런 후에 예매 확정을 누르게 되면 예매에 성공하였다는 알림창이 뜨게 되고, 모바일 티켓이 발행된다.
 - 또한 데이터베이스에 존재하는 해당 영화와 시간의 이용할 수 있는 좌석 갯수가 1씩 감소하게 된다. 예매를 확정한 후 예매창을 다시 들어갔을 때, 이용좌석의 갯수가 줄어든 것을 확인할 수 있다.
