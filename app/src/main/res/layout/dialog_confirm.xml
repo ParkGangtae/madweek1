@@ -7,7 +7,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="260dp"
-    android:layout_height="380dp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="30dp"
     android:layout_marginLeft="9dp"
     android:layout_marginBottom="10dp"
@@ -17,11 +17,10 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/ticketCardView"
         android:layout_width="match_parent"
-        android:layout_height="33dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:orientation="vertical"
         card_view:cardBackgroundColor="#6441A5"
-
         card_view:cardElevation="10dp">
 
         <TextView
@@ -51,10 +50,6 @@
         card_view:cardUseCompatPadding="true"
         card_view:cardBackgroundColor="#FFFFFF"
         card_view:cardElevation="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/confirm_movie"
@@ -106,7 +101,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview2"
         android:layout_width="80dp"
-        android:layout_height="28dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="115dp"
         card_view:cardBackgroundColor="#44c0cc"
@@ -120,11 +115,10 @@
             android:layout_gravity="center_horizontal"
             android:text=" E열 10 > "
             android:textSize="12dp"
-            android:layout_marginTop="3dp"
+            android:layout_margin="3dp"
             android:textColor="#FFFFFF"/>
 
     </androidx.cardview.widget.CardView>
-
 
         <ImageView
             android:id="@+id/confirm_barcode"
@@ -133,8 +127,6 @@
             android:src="@drawable/barcode"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="180dp"/>
-
-
 
     </androidx.cardview.widget.CardView>
 
