@@ -11,6 +11,7 @@
     android:columnCount="2"
     tools:context=".Fragment1">
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="225dp"
