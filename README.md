@@ -32,15 +32,25 @@ TabLayout을 적용해 TabPagerAdapter를 이용해 각 Fragment를 볼 수 있�
 <br>
 
 ### Tab 1: Members
+구성원의 프로필을 보고 영화를 예매할 수 있는 탭
 
+#### 프로필
+
+- 구성원의 프로필을 CardView로 만들었기 때문에 상영회에 참여하고 싶은 구성원들은 예매하기 버튼을 눌러서 각자 영화를 예매할 수 있다.
+- 맨 상단에는 SearchView를 추가하여 검색하고 싶은 이름, 생년월일, MBTI, 연락처의 텍스트를 입력하고 Submit하면 해당 데이터의 위치로 스크롤이 이동한다. 또한 SearchView의 X 버튼을 누르게 된다면 Tab 1의 최상단으로 이동한다.
+
+#### 예매하기
+
+
+
+<br>
 
 ### Tab 2: Movie Gallery
 상영작 20개의 포스터와 예고편을 볼 수 있는 탭
 
-<img src = "https://github.com/ParkGangtae/madweek1/assets/51894747/c10569bd-f9d9-4b25-8c5a-541f897aeef0.jpg" width = 20% height = 20%>
+<img src = "https://github.com/ParkGangtae/madweek1/assets/51894747/c10569bd-f9d9-4b25-8c5a-541f897aeef0.jpg" width = 20% height = 20%>  
 
 <img src = "https://github.com/ParkGangtae/madweek1/assets/51894747/445774f6-80ec-4489-a651-70e3f53ec944.jpg" width = 20% height = 20%>
-
 
 LinearLayout (horizontal)에 GridView 2개를 배치해 두 열이 각각 따로 움직일 수 있게 레이아웃 제작
 
@@ -55,8 +65,9 @@ LinearLayout (horizontal)에 GridView 2개를 배치해 두 열이 각각 따로
 ### Tab 3: Review
 영화 리뷰를 작성하고 평균 별점 랭킹을 볼 수 있는 탭
 
+<img src = "https://github.com/ParkGangtae/madweek1/assets/51894747/df2a37de-cb24-4961-bb33-2f0aab3b7708.jpg" width = 20% height = 20%>  
 
-
+<img src = "https://github.com/ParkGangtae/madweek1/assets/51894747/f849a826-ca16-4f4a-bac5-cb4220f528a2.jpg" width = 20% height = 20%>
 
 RecyclerView를 이용해서 가로 넘겨볼 수 있는 리뷰 모음집과 영화 랭킹을 표시함
 
